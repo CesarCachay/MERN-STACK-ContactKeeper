@@ -6,10 +6,17 @@ import Home from "./views/Home";
 import About from "./views/About";
 import Register from "./views/Register";
 import Login from "./views/Login";
+
 import ContactState from "./context/contact/ContactState";
 import AuthContext from "./context/auth/AuthState";
 import AlertState from "./context/alert/AlertState";
 import Alerts from "./components/layout/Alerts";
+
+import setAuthToken from "./utils/SetAuthToken";
+
+if (localStorage.token) {
+  setAuthToken(localStorage.token);
+}
 
 const App = () => {
   return (
