@@ -25,12 +25,19 @@ const ContactState = props => {
       {
         id: 2,
         name: "Anthony Cachay",
-        email: "tony@urp.edu.pe",
+        email: "anthony@urp.edu.pe",
         phone: "983-341-531",
         type: "personal"
       },
       {
         id: 3,
+        name: "Chester Cachay",
+        email: "chester@dog.com",
+        phone: "987-654-661",
+        type: "professional"
+      },
+      {
+        id: 4,
         name: "Maria Francia",
         email: "mfrancia@gmail.com",
         phone: "989-246-969",
