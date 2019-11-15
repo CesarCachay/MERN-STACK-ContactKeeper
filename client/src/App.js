@@ -6,6 +6,7 @@ import Home from "./views/Home";
 import About from "./views/About";
 import Register from "./views/Register";
 import Login from "./views/Login";
+import PrivateRoute from "./components/routing/PrivateRoute";
 
 import ContactState from "./context/contact/ContactState";
 import AuthContext from "./context/auth/AuthState";
@@ -29,7 +30,7 @@ const App = () => {
               <div className="container">
                 <Alerts />
                 <Switch>
-                  <Route exact path="/" component={Home} />
+                  <PrivateRoute exact path="/" component={Home} />
                   <Route exact path="/about" component={About} />
                   <Route exact path="/register" component={Register} />
                   <Route exact path="/login" component={Login} />
