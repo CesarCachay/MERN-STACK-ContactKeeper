@@ -70,6 +70,14 @@ export default (state, action) => {
         ...state,
         error: action.payload
       };
+    case CLEAR_CONTACTS:
+      return {
+        ...state,
+        contacts: null,
+        filtered: null,
+        current: null,
+        error: null
+      };
     default:
       return state;
   }
