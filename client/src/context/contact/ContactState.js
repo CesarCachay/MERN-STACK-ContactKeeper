@@ -17,7 +17,7 @@ import {
 
 const ContactState = props => {
   const initialState = {
-    contacts: null,
+    contacts: [],
     current: null,
     filtered: null,
     error: null
@@ -28,16 +28,16 @@ const ContactState = props => {
   // Get Contacts
   const getContacts = async () => {
     try {
-      const res = await axios.get("/api/contacts");
+      const response = await axios.get("/api/contacts");
 
       dispatch({
         type: GET_CONTACTS,
-        payload: res.data
+        payload: response.data
       });
-    } catch (err) {
+    } catch (error) {
       dispatch({
         type: ERROR_CONTACT,
-        payload: err.response.msg
+        payload: error.response.msg
       });
     }
   };
